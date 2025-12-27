@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://tohyanhui.vercel.app/sitemap.xml
+Sitemap: https://www.tohyanhui.com/sitemap.xml

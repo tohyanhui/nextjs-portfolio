@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tohyanhui.vercel.app'),
+  metadataBase: new URL('https://www.tohyanhui.com'),
   title: {
     default: "Toh Yan Hui - Software Developer Portfolio",
     template: "%s | Toh Yan Hui"
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tohyanhui.vercel.app",
+    url: "https://www.tohyanhui.com",
     title: "Toh Yan Hui - Software Developer Portfolio",
     description: "Software Developer specializing in web and mobile development. Expert in React, Next.js, React Native, Java, and Python.",
     siteName: "Toh Yan Hui Portfolio",

@@ -13,7 +13,7 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Toh Yan Hui',
-    url: 'https://tohyanhui.vercel.app',
+    url: 'https://www.tohyanhui.com',
     jobTitle: 'Software Developer',
     description: 'Software Developer specializing in web and mobile development',
     sameAs: [
