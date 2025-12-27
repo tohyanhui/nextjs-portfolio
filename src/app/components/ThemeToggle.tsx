@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(false);
@@ -42,12 +43,16 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button onClick={toggleTheme} className="">
-      <i
-        className={`fa-solid ${
-          isDark ? "fa-sun" : "fa-moon"
-        } text-gray-600 dark:text-gray-400`}
-      ></i>
+    <button 
+      onClick={toggleTheme} 
+      className="p-2"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+    >
+      {isDark ? (
+        <FaSun className="text-gray-600 dark:text-gray-400" />
+      ) : (
+        <FaMoon className="text-gray-600 dark:text-gray-400" />
+      )}
     </button>
   );
 };

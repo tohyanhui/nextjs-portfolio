@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => (
   <section
@@ -22,13 +22,14 @@ const Projects = () => (
               src="/item-1.png"
               alt="Momo"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-contain"
             />
             <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
           </div>
           <div className="p-6">
             <h3 className="text-xl font-bold mb-4">Momo</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4 h-16">
+            <p className="text-gray-600 dark:text-gray-400 mb-4 min-h-[4rem]">
               A task management system with a GUI optimized for command-line
               style interactions.
             </p>
@@ -52,8 +53,9 @@ const Projects = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                aria-label="View Momo project on GitHub"
               >
-                <i className="fa-brands fa-github mr-2"></i>
+                <FaGithub className="mr-2" />
                 Code
               </a>
             </div>
@@ -66,13 +68,14 @@ const Projects = () => (
               src="/item-2.png"
               alt="TokTok"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-contain"
             />
             <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
           </div>
           <div className="p-6">
             <h3 className="text-xl font-bold mb-4">TokTok</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4 h-16">
+            <p className="text-gray-600 dark:text-gray-400 mb-4 min-h-[4rem]">
               A machine learning–based system using DeBERTa to classify online
               reviews automatically.
             </p>
@@ -105,8 +108,9 @@ const Projects = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                aria-label="View TokTok project on GitHub"
               >
-                <i className="fa-brands fa-github mr-2"></i>
+                <FaGithub className="mr-2" />
                 Code
               </a>
             </div>
@@ -119,13 +123,14 @@ const Projects = () => (
               src="/item-3.png"
               alt="LinkedPair"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-contain"
             />
             <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
           </div>
           <div className="p-6">
             <h3 className="text-xl font-bold mb-4">LinkedPair</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-4 h-16">
+            <p className="text-gray-600 dark:text-gray-400 mb-4 min-h-[4rem]">
               A React Native app using natural language processing with OpenAI
               embeddings to match NUS students.
             </p>
@@ -152,8 +157,9 @@ const Projects = () => (
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                aria-label="View LinkedPair project on GitHub"
               >
-                <i className="fa-brands fa-github mr-2"></i>
+                <FaGithub className="mr-2" />
                 Code
               </a>
             </div>

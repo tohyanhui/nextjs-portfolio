@@ -1,4 +1,4 @@
-import React from "react";
+import { FaPaintBrush, FaCode, FaBolt, FaMobileAlt } from "react-icons/fa";
 
 const Features = () => (
   <section id="features" className="py-24 bg-gray-50 dark:bg-dark-background-secondary translate-y-4 transition-all duration-500 opacity-0">
@@ -13,7 +13,7 @@ const Features = () => (
         {/* Feature Card 1 */}
         <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-            <i className="fa-solid fa-paintbrush text-primary text-xl"></i>
+            <FaPaintBrush className="text-primary text-xl" />
           </div>
           <h3 className="text-xl font-bold mb-4">Modern UI Design</h3>
           <p className="text-gray-600 dark:text-gray-400">
@@ -23,7 +23,7 @@ const Features = () => (
         {/* Feature Card 2 */}
         <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-            <i className="fa-solid fa-code text-primary text-xl"></i>
+            <FaCode className="text-primary text-xl" />
           </div>
           <h3 className="text-xl font-bold mb-4">Clean Code</h3>
           <p className="text-gray-600 dark:text-gray-400">
@@ -33,7 +33,7 @@ const Features = () => (
         {/* Feature Card 3 */}
         <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-            <i className="fa-solid fa-bolt text-primary text-xl"></i>
+            <FaBolt className="text-primary text-xl" />
           </div>
           <h3 className="text-xl font-bold mb-4">Performance Optimisation</h3>
           <p className="text-gray-600 dark:text-gray-400">
@@ -43,7 +43,7 @@ const Features = () => (
         {/* Feature Card 4 */}
         <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-            <i className="fa-solid fa-mobile-alt text-primary text-xl"></i>
+            <FaMobileAlt className="text-primary text-xl" />
           </div>
           <h3 className="text-xl font-bold mb-4">Responsive Development</h3>
           <p className="text-gray-600 dark:text-gray-400">

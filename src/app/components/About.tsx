@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 const About = () => (
@@ -28,7 +27,13 @@ const About = () => (
         <div className="relative">
           <div className="w-72 h-72 mx-auto animate-morph bg-gradient-to-br from-primary via-secondary to-accent rounded-full relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-secondary/50 to-accent/50 rounded-full blur-2xl animate-morph"></div>
-            <Image src="/profile-1.png" alt="Profile Photo" fill className="absolute inset-0 w-full h-full object-cover z-10" />
+            <Image 
+              src="/profile-1.png" 
+              alt="Profile Photo" 
+              fill 
+              sizes="288px"
+              className="absolute inset-0 w-full h-full object-cover z-10" 
+            />
           </div>
         </div>
       </div>

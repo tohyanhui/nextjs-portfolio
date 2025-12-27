@@ -4,18 +4,20 @@ import { useEffect } from "react";
 
 const ScrollAnimations = () => {
   useEffect(() => {
-    const header = document.querySelector("header");
-    const sections = document.querySelectorAll("section");
-
     const checkScroll = () => {
+      const header = document.querySelector("header");
+      
       // Header shadow
-      if (window.scrollY > 0) {
-        header?.classList.add("shadow-md");
-      } else {
-        header?.classList.remove("shadow-md");
+      if (header) {
+        if (window.scrollY > 0) {
+          header.classList.add("shadow-md");
+        } else {
+          header.classList.remove("shadow-md");
+        }
       }
 
       // Reveal animations for sections
+      const sections = document.querySelectorAll("section");
       sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
@@ -40,6 +42,7 @@ const ScrollAnimations = () => {
           : null;
 
         if (targetElement) {
+          const header = document.querySelector("header");
           const headerHeight = header?.offsetHeight || 0;
           const targetPosition =
             targetElement.getBoundingClientRect().top +

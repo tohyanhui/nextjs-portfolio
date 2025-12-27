@@ -1,4 +1,4 @@
-import React from "react";
+import { FaHtml5, FaCss3, FaJs, FaPython, FaJava, FaReact } from "react-icons/fa";
 
 const Skills = () => (
   <section
@@ -15,9 +15,9 @@ const Skills = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Skill Card 1 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg">
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
           <div className="w-16 h-16 bg-orange-600/10 rounded-full flex items-center justify-center mb-6">
-            <i className="fa-brands fa-html5 text-orange-600 text-3xl"></i>
+            <FaHtml5 className="text-orange-600 text-3xl" />
           </div>
           <h3 className="text-xl font-bold mb-4">HTML5</h3>
           <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
@@ -25,9 +25,9 @@ const Skills = () => (
           </div>
         </div>
         {/* Skill Card 2 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg">
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
           <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-6">
-            <i className="fa-brands fa-css3 text-blue-500 text-3xl"></i>
+            <FaCss3 className="text-blue-500 text-3xl" />
           </div>
           <h3 className="text-xl font-bold mb-4">CSS3</h3>
           <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
@@ -35,9 +35,9 @@ const Skills = () => (
           </div>
         </div>
         {/* Skill Card 3 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg">
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
           <div className="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6">
-            <i className="fa-brands fa-js text-yellow-400 text-3xl"></i>
+            <FaJs className="text-yellow-400 text-3xl" />
           </div>
           <h3 className="text-xl font-bold mb-4">JavaScript</h3>
           <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
@@ -47,7 +47,7 @@ const Skills = () => (
         {/* Skill Card 4 */}
         <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
           <div className="w-16 h-16 bg-blue-700/10 rounded-full flex items-center justify-center mb-6">
-            <i className="fa-brands fa-python text-blue-700 text-3xl"></i>
+            <FaPython className="text-blue-700 text-3xl" />
           </div>
           <h3 className="text-xl font-bold mb-4">Python</h3>
           <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
@@ -57,7 +57,7 @@ const Skills = () => (
         {/* Skill Card 5 */}
         <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
           <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6">
-            <i className="fa-brands fa-java text-orange-500 text-3xl"></i>
+            <FaJava className="text-orange-500 text-3xl" />
           </div>
           <h3 className="text-xl font-bold mb-4">Java</h3>
           <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
@@ -67,7 +67,7 @@ const Skills = () => (
         {/* Skill Card 6 */}
         <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
           <div className="w-16 h-16 bg-blue-300/10 rounded-full flex items-center justify-center mb-6">
-            <i className="fa-brands fa-react text-cyan-300 text-3xl"></i>
+            <FaReact className="text-cyan-300 text-3xl" />
           </div>
           <h3 className="text-xl font-bold mb-4">React Native</h3>
           <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">

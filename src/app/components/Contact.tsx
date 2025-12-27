@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
+import { FaEnvelope, FaMapMarkerAlt, FaGlobe, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -24,9 +25,9 @@ const Contact = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            service_id: "service_ezcphyg",
-            template_id: "template_g1359jd",
-            user_id: "NtEBNuKBba7qpzrr9",
+            service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+            template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+            user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
             template_params: {
               name: formState.name,
               email: formState.email,
@@ -40,10 +41,12 @@ const Contact = () => {
         setButtonText("Message Sent!");
         setFormState({ name: "", email: "", message: "" });
       } else {
+        const errorData = await response.json().catch(() => ({}));
+        console.error("Send failed:", errorData);
         setButtonText("Send Failed, Try Again");
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error sending message:", error);
       setButtonText("Send Failed, Try Again");
     }
 
@@ -71,7 +74,7 @@ const Contact = () => {
             {/* Email */}
             <div className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fa-solid fa-envelope text-primary text-xl"></i>
+                <FaEnvelope className="text-primary text-xl" />
               </div>
               <h3 className="text-xl font-bold mb-2">Email</h3>
               <p className="text-gray-600 dark:text-gray-400">
@@ -81,7 +84,7 @@ const Contact = () => {
             {/* Location */}
             <div className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fa-solid fa-map-location-dot text-primary text-xl"></i>
+                <FaMapMarkerAlt className="text-primary text-xl" />
               </div>
               <h3 className="text-xl font-bold mb-2">Location</h3>
               <p className="text-gray-600 dark:text-gray-400">Bukit Panjang</p>
@@ -89,7 +92,7 @@ const Contact = () => {
             {/* Social */}
             <div className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fa-solid fa-globe text-primary text-xl"></i>
+                <FaGlobe className="text-primary text-xl" />
               </div>
               <h3 className="text-xl font-bold mb-2">Social</h3>
               <div className="flex justify-center space-x-4">
@@ -98,24 +101,27 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
+                  aria-label="Visit GitHub profile"
                 >
-                  <i className="fa-brands fa-github"></i>
+                  <FaGithub />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/tohyanhui/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
+                  aria-label="Visit LinkedIn profile"
                 >
-                  <i className="fa-brands fa-linkedin"></i>
+                  <FaLinkedin />
                 </a>
                 <a
                   href="https://x.com/tohyanhui01"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
+                  aria-label="Visit X (Twitter) profile"
                 >
-                  <i className="fa-brands fa-twitter"></i>
+                  <FaTwitter />
                 </a>
               </div>
             </div>

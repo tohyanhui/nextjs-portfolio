@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { FaTimes } from "react-icons/fa";
+import { navigationLinks } from "../config/navigation";
 
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -56,56 +58,22 @@ const MobileMenu: React.FC = () => {
               className="p-2"
               aria-label="Close mobile menu"
             >
-              <i className="fa-solid fa-square-xmark text-gray-600 dark:text-gray-400 text-2xl" />
+              <FaTimes className="text-gray-600 dark:text-gray-400 text-2xl" />
             </button>
           </div>
 
           <ul className="flex-1 flex flex-col justify-center items-center space-y-8">
-            <li>
-              <a
-                href="#features"
-                onClick={handleClose}
-                className="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-              >
-                Showcase
-              </a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                onClick={handleClose}
-                className="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#skills"
-                onClick={handleClose}
-                className="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-              >
-                Skills
-              </a>
-            </li>
-            <li>
-              <a
-                href="#projects"
-                onClick={handleClose}
-                className="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                onClick={handleClose}
-                className="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-              >
-                Contact
-              </a>
-            </li>
+            {navigationLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={handleClose}
+                  className="text-2xl text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

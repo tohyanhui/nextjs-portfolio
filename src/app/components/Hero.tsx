@@ -1,4 +1,3 @@
-import React from "react";
 import TerminalAnimation from "./TerminalAnimation";
 
 const Hero = () => (
