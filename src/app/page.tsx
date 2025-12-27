@@ -9,8 +9,37 @@ import Footer from "./components/Footer";
 import ScrollAnimations from "./components/ScrollAnimations";
 
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Toh Yan Hui',
+    url: 'https://tohyanhui.vercel.app',
+    jobTitle: 'Software Developer',
+    description: 'Software Developer specializing in web and mobile development',
+    sameAs: [
+      'https://github.com/tohyanhui',
+      'https://www.linkedin.com/in/tohyanhui/',
+      'https://x.com/tohyanhui01',
+    ],
+    knowsAbout: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'React Native',
+      'Java',
+      'Python',
+      'Web Development',
+      'Mobile Development',
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ScrollAnimations />
       <Header />
       <main>

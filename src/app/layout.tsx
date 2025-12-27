@@ -12,8 +12,46 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Toh Yan Hui Portfolio",
-  description: "Developer Portfolio - Toh Yan Hui",
+  metadataBase: new URL('https://tohyanhui.vercel.app'),
+  title: {
+    default: "Toh Yan Hui - Software Developer Portfolio",
+    template: "%s | Toh Yan Hui"
+  },
+  description: "Software Developer specializing in web and mobile development. Expert in React, Next.js, React Native, Java, and Python. View my projects and get in touch.",
+  keywords: ["Toh Yan Hui", "Software Developer", "Web Developer", "Mobile Developer", "React", "Next.js", "React Native", "Java", "Python", "Portfolio"],
+  authors: [{ name: "Toh Yan Hui" }],
+  creator: "Toh Yan Hui",
+  publisher: "Toh Yan Hui",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://tohyanhui.vercel.app",
+    title: "Toh Yan Hui - Software Developer Portfolio",
+    description: "Software Developer specializing in web and mobile development. Expert in React, Next.js, React Native, Java, and Python.",
+    siteName: "Toh Yan Hui Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Toh Yan Hui - Software Developer Portfolio",
+    description: "Software Developer specializing in web and mobile development. Expert in React, Next.js, React Native, Java, and Python.",
+    creator: "@tohyanhui01",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export const viewport: Viewport = {
