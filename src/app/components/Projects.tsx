@@ -17,13 +17,13 @@ const Projects = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Project Card 1 */}
         <div className="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-          <div className="relative h-48 w-full overflow-hidden">
+          <div className="relative h-64 w-full overflow-hidden">
             <Image
               src="/item-1.png"
               alt="Momo"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-contain"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
           </div>
@@ -63,13 +63,13 @@ const Projects = () => (
         </div>
         {/* Project Card 2 */}
         <div className="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-          <div className="relative h-48 w-full overflow-hidden">
+          <div className="relative h-64 w-full overflow-hidden">
             <Image
               src="/item-2.png"
               alt="TokTok"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-contain"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
           </div>
@@ -118,13 +118,13 @@ const Projects = () => (
         </div>
         {/* Project Card 3 */}
         <div className="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-          <div className="relative h-48 w-full overflow-hidden">
+          <div className="relative h-64 w-full overflow-hidden">
             <Image
               src="/item-3.png"
               alt="LinkedPair"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-contain"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
           </div>
