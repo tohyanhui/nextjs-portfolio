@@ -18,7 +18,7 @@ module.exports = {
       },
       animation: {
         morph: "morph 8s ease-in-out infinite",
-        blink: "blink 1s infinite",
+        blink: "blink 1s step-end infinite",
       },
       keyframes: {
         morph: {

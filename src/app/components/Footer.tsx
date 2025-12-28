@@ -1,7 +1,7 @@
 "use client";
 
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { navigationLinks } from "../config/navigation";
+import { navigationLinks, socialLinks } from "../config/navigation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,7 +28,7 @@ const Footer = () => {
           </ul>
           <div className="flex gap-4">
             <a
-              href="https://github.com/tohyanhui"
+              href={socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
@@ -37,7 +37,7 @@ const Footer = () => {
               <FaGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/tohyanhui/"
+              href={socialLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
@@ -46,7 +46,7 @@ const Footer = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://x.com/tohyanhui01"
+              href={socialLinks.twitter}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"

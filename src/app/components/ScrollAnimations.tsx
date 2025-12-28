@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 
+const SCROLL_REVEAL_THRESHOLD = 0.85;
+
 const ScrollAnimations = () => {
   useEffect(() => {
     const checkScroll = () => {
@@ -22,7 +24,7 @@ const ScrollAnimations = () => {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        if (sectionTop < windowHeight * 0.85) {
+        if (sectionTop < windowHeight * SCROLL_REVEAL_THRESHOLD) {
           section.classList.add("opacity-100", "translate-y-0");
           section.classList.remove("opacity-0", "translate-y-4");
         }

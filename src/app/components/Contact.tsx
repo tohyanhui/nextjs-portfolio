@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
@@ -9,6 +9,9 @@ import {
   FaLinkedin,
   FaTwitter,
 } from "react-icons/fa";
+import { socialLinks, contactInfo } from "../config/navigation";
+
+const BUTTON_RESET_DELAY = 3000;
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -17,6 +20,15 @@ const Contact = () => {
     message: "",
   });
   const [buttonText, setButtonText] = useState("Send Message");
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -57,9 +69,9 @@ const Contact = () => {
       setButtonText("Send Failed, Try Again");
     }
 
-    setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setButtonText("Send Message");
-    }, 3000);
+    }, BUTTON_RESET_DELAY);
   };
 
   return (
@@ -85,7 +97,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-bold mb-2">Email</h3>
               <p className="text-gray-600 dark:text-gray-400">
-                yanhuiphone@gmail.com
+                {contactInfo.email}
               </p>
             </div>
             {/* Location */}
@@ -94,7 +106,7 @@ const Contact = () => {
                 <FaMapMarkerAlt className="text-primary text-xl" />
               </div>
               <h3 className="text-xl font-bold mb-2">Location</h3>
-              <p className="text-gray-600 dark:text-gray-400">Bukit Panjang</p>
+              <p className="text-gray-600 dark:text-gray-400">{contactInfo.location}</p>
             </div>
             {/* Social */}
             <div className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center">
@@ -104,7 +116,7 @@ const Contact = () => {
               <h3 className="text-xl font-bold mb-2">Social</h3>
               <div className="flex justify-center space-x-4">
                 <a
-                  href="https://github.com/tohyanhui"
+                  href={socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
@@ -113,7 +125,7 @@ const Contact = () => {
                   <FaGithub />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/tohyanhui/"
+                  href={socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
@@ -122,7 +134,7 @@ const Contact = () => {
                   <FaLinkedin />
                 </a>
                 <a
-                  href="https://x.com/tohyanhui01"
+                  href={socialLinks.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-gray-100 dark:bg-dark-background-secondary rounded-full flex items-center justify-center text-gray-600 hover:text-primary dark:hover:text-primary dark:text-gray-400 transition-all duration-300"
