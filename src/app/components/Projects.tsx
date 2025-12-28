@@ -5,7 +5,7 @@ import { projects } from "../config/navigation";
 const Projects = () => (
   <section
     id="projects"
-    className="py-24 translate-y-4 transition-all duration-500 opacity-0"
+    className="py-24 bg-white dark:bg-dark-background translate-y-4 transition-all duration-500 opacity-0"
   >
     <div className="container mx-auto px-4">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
@@ -19,7 +19,7 @@ const Projects = () => (
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="bg-white dark:bg-dark-background rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10"
           >
             <div className="relative h-64 w-full overflow-hidden">
               <Image
@@ -29,9 +29,8 @@ const Projects = () => (
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
             </div>
-            <div className="p-6">
+            <div className="p-6 border-t border-gray-200 dark:border-gray-800">
               <h3 className="text-xl font-bold mb-4">{project.title}</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4 min-h-[4rem]">
                 {project.description}

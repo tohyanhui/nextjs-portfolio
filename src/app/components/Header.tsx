@@ -4,7 +4,7 @@ import { navigationLinks } from "../config/navigation";
 
 const Header = () => (
   <>
-    <header className="fixed w-full top-0 z-50 bg-white/95 dark:bg-dark-background/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+    <header className="fixed w-full top-0 z-50 bg-white/95 dark:bg-dark-background/95 backdrop-blur-sm shadow-sm transition-all duration-300 dark:border-b dark:border-gray-800">
       <div className="container mx-auto px-4">
         <nav className="flex justify-between items-center py-4">
           <div className="flex items-center">

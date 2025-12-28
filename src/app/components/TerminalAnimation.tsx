@@ -26,7 +26,7 @@ const TerminalAnimation = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 dark:bg-dark-background-secondary rounded-lg overflow-hidden shadow-lg max-w-2xl mx-auto">
+    <div className="bg-gray-100 dark:bg-dark-background-secondary rounded-lg overflow-hidden shadow-lg max-w-2xl mx-auto border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
       <div className="flex items-center space-x-2 p-3 bg-gray-200 dark:bg-dark-background">
         <span className="w-3 h-3 rounded-full bg-red-500"></span>
         <span className="w-3 h-3 rounded-full bg-yellow-500"></span>

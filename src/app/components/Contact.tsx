@@ -77,7 +77,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-24 translate-y-4 transition-all duration-500 opacity-0"
+      className="py-24 bg-gray-50 dark:bg-dark-background-secondary translate-y-4 transition-all duration-500 opacity-0"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
@@ -91,7 +91,7 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="lg:col-span-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6">
             {/* Email */}
-            <div className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center">
+            <div className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaEnvelope className="text-primary text-xl" />
               </div>
@@ -101,7 +101,7 @@ const Contact = () => {
               </p>
             </div>
             {/* Location */}
-            <div className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center">
+            <div className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaMapMarkerAlt className="text-primary text-xl" />
               </div>
@@ -109,7 +109,7 @@ const Contact = () => {
               <p className="text-gray-600 dark:text-gray-400">{contactInfo.location}</p>
             </div>
             {/* Social */}
-            <div className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center">
+            <div className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg text-center border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FaGlobe className="text-primary text-xl" />
               </div>
@@ -150,7 +150,7 @@ const Contact = () => {
           <div className="lg:col-span-2">
             <form
               onSubmit={handleSubmit}
-              className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg"
+              className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10"
             >
               <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
               <div className="space-y-6">

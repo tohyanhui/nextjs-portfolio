@@ -11,7 +11,7 @@ const Features = () => (
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Feature Card 1 */}
-        <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+        <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
             <FaPaintBrush className="text-primary text-xl" />
           </div>
@@ -21,7 +21,7 @@ const Features = () => (
           </p>
         </div>
         {/* Feature Card 2 */}
-        <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+        <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
             <FaCode className="text-primary text-xl" />
           </div>
@@ -31,7 +31,7 @@ const Features = () => (
           </p>
         </div>
         {/* Feature Card 3 */}
-        <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+        <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
             <FaBolt className="text-primary text-xl" />
           </div>
@@ -41,7 +41,7 @@ const Features = () => (
           </p>
         </div>
         {/* Feature Card 4 */}
-        <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+        <div className="bg-white dark:bg-dark-background p-8 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
             <FaMobileAlt className="text-primary text-xl" />
           </div>

@@ -18,7 +18,7 @@ const ThemeToggle = () => {
       setIsDark(true);
       document
         .querySelector("meta[name='theme-color']")
-        ?.setAttribute("content", "#000000");
+        ?.setAttribute("content", "#000");
     }
   }, []);
 
@@ -32,7 +32,7 @@ const ThemeToggle = () => {
     if (isDarkMode) {
       document
         .querySelector("meta[name='theme-color']")
-        ?.setAttribute("content", "#000000");
+        ?.setAttribute("content", "#000");
       localStorage.setItem("theme", "dark");
     } else {
       document

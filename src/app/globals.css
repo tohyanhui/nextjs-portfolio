@@ -10,8 +10,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000;
+    --foreground: #f5f5f5;
   }
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 html.dark [data-mobile-menu] {
-  background-color: #000000 !important;
+  background-color: #0a0a0a !important;
   opacity: 1 !important;
 }
 

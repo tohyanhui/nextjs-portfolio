@@ -15,7 +15,7 @@ const Skills = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Skill Card 1 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-16 h-16 bg-orange-600/10 rounded-full flex items-center justify-center mb-6">
             <FaHtml5 className="text-orange-600 text-3xl" />
           </div>
@@ -25,7 +25,7 @@ const Skills = () => (
           </div>
         </div>
         {/* Skill Card 2 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-6">
             <FaCss3 className="text-blue-500 text-3xl" />
           </div>
@@ -35,7 +35,7 @@ const Skills = () => (
           </div>
         </div>
         {/* Skill Card 3 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6">
             <FaJs className="text-yellow-400 text-3xl" />
           </div>
@@ -45,7 +45,7 @@ const Skills = () => (
           </div>
         </div>
         {/* Skill Card 4 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-16 h-16 bg-blue-700/10 rounded-full flex items-center justify-center mb-6">
             <FaPython className="text-blue-700 text-3xl" />
           </div>
@@ -55,7 +55,7 @@ const Skills = () => (
           </div>
         </div>
         {/* Skill Card 5 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6">
             <FaJava className="text-orange-500 text-3xl" />
           </div>
@@ -65,7 +65,7 @@ const Skills = () => (
           </div>
         </div>
         {/* Skill Card 6 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-16 h-16 bg-blue-300/10 rounded-full flex items-center justify-center mb-6">
             <FaReact className="text-cyan-300 text-3xl" />
           </div>
@@ -75,7 +75,7 @@ const Skills = () => (
           </div>
         </div>
         {/* Skill Card 7 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
           <div className="w-16 h-16 bg-red-600/10 rounded-full flex items-center justify-center mb-6">
             <FaDatabase className="text-red-600 text-3xl" />
           </div>
