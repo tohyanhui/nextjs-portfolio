@@ -1,4 +1,4 @@
-import { FaHtml5, FaCss3, FaJs, FaPython, FaJava, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3, FaJs, FaPython, FaJava, FaReact, FaDatabase } from "react-icons/fa";
 
 const Skills = () => (
   <section
@@ -72,6 +72,16 @@ const Skills = () => (
           <h3 className="text-xl font-bold mb-4">React Native</h3>
           <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
             <div className="w-[80%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+          </div>
+        </div>
+        {/* Skill Card 7 */}
+        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg">
+          <div className="w-16 h-16 bg-red-600/10 rounded-full flex items-center justify-center mb-6">
+            <FaDatabase className="text-red-600 text-3xl" />
+          </div>
+          <h3 className="text-xl font-bold mb-4">SQL</h3>
+          <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
+            <div className="w-[85%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
           </div>
         </div>
       </div>
