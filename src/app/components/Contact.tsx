@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { FaEnvelope, FaMapMarkerAlt, FaGlobe, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaGlobe,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -17,25 +24,32 @@ const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formState.name,
-          email: formState.email,
-          message: formState.message,
-        }),
-      });
-
-      const data = await response.json();
+      const response = await fetch(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+            template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+            user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
+            template_params: {
+              name: formState.name,
+              email: formState.email,
+              message: formState.message,
+            },
+          }),
+        }
+      );
 
       if (response.ok) {
         setButtonText("Message Sent!");
         setFormState({ name: "", email: "", message: "" });
       } else {
-        console.error("Send failed:", data.error);
+        const errorData = await response.json().catch(() => ({}));
+        console.error("Send failed:", errorData);
         setButtonText("Send Failed, Try Again");
       }
     } catch (error) {
