@@ -19,6 +19,16 @@ export const metadata: Metadata = {
   },
   description: "Software Developer specializing in web and mobile development. Expert in React, Next.js, React Native, Java, and Python. View my projects and get in touch.",
   keywords: ["Toh Yan Hui", "Software Developer", "Web Developer", "Mobile Developer", "React", "Next.js", "React Native", "Java", "Python", "Portfolio"],
+  icons: {
+    icon: [
+      { url: '/icon', type: 'image/png', sizes: '32x32' },
+      { url: '/icon-192', type: 'image/png', sizes: '192x192' },
+      { url: '/icon-512', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [
+      { url: '/apple-icon', type: 'image/png', sizes: '180x180' },
+    ],
+  },
   authors: [{ name: "Toh Yan Hui" }],
   creator: "Toh Yan Hui",
   publisher: "Toh Yan Hui",
