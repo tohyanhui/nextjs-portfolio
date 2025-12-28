@@ -9,10 +9,9 @@ export default function manifest() {
     theme_color: '#0070f3',
     icons: [
       {
-        src: '/icon',
+        src: '/favicon.ico',
         sizes: '32x32',
-        type: 'image/png',
-        purpose: 'any',
+        type: 'image/x-icon',
       },
       {
         src: '/apple-icon',
