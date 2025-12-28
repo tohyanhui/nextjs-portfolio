@@ -17,32 +17,25 @@ const Contact = () => {
     setButtonText("Sending...");
 
     try {
-      const response = await fetch(
-        "https://api.emailjs.com/api/v1.0/email/send",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-            template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-            user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
-            template_params: {
-              name: formState.name,
-              email: formState.email,
-              message: formState.message,
-            },
-          }),
-        }
-      );
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+        }),
+      });
+
+      const data = await response.json();
 
       if (response.ok) {
         setButtonText("Message Sent!");
         setFormState({ name: "", email: "", message: "" });
       } else {
-        const errorData = await response.json().catch(() => ({}));
-        console.error("Send failed:", errorData);
+        console.error("Send failed:", data.error);
         setButtonText("Send Failed, Try Again");
       }
     } catch (error) {

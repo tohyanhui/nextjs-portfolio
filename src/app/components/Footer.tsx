@@ -1,7 +1,7 @@
 "use client";
 
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { navigationLinks, socialLinks } from "../config/navigation";
+import { navigationLinks } from "../config/navigation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

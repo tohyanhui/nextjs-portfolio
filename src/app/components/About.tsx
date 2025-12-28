@@ -29,7 +29,7 @@ const About = () => (
             <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-secondary/50 to-accent/50 rounded-full blur-2xl animate-morph"></div>
             <Image 
               src="/profile-1.png" 
-              alt="Profile Photo" 
+              alt="Toh Yan Hui - Software Developer portrait photo" 
               fill 
               sizes="288px"
               className="absolute inset-0 w-full h-full object-cover z-10" 

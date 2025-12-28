@@ -20,7 +20,7 @@ const Projects = () => (
           <div className="relative h-64 w-full overflow-hidden">
             <Image
               src="/item-1.png"
-              alt="Momo"
+              alt="Momo task management system interface with command-line style GUI"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover"
@@ -66,7 +66,7 @@ const Projects = () => (
           <div className="relative h-64 w-full overflow-hidden">
             <Image
               src="/item-2.png"
-              alt="TokTok"
+              alt="TokTok machine learning review classification system using DeBERTa"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover"
@@ -121,7 +121,7 @@ const Projects = () => (
           <div className="relative h-64 w-full overflow-hidden">
             <Image
               src="/item-3.png"
-              alt="LinkedPair"
+              alt="LinkedPair student matching app using OpenAI embeddings and NLP"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover"
