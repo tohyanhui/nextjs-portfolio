@@ -36,12 +36,12 @@ const MobileMenu: React.FC = () => {
   const menuContent = mounted ? createPortal(
     <div
       data-mobile-menu="true"
-      className={`fixed left-0 top-0 z-[9999] w-screen h-screen bg-white dark:bg-dark-background transition-transform duration-300 md:hidden ${
+      className={`fixed left-0 top-0 z-[9999] w-screen h-dvh bg-white dark:bg-dark-background transition-transform duration-300 md:hidden ${
         isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
       <div className="w-full h-full flex flex-col">
-        <div className="flex justify-between items-center py-4 px-4">
+        <div className="flex justify-between items-center py-4 px-4 flex-shrink-0">
           <div className="flex items-center">
             <span className="text-xl font-extrabold">Toh Yan Hui</span>
             <span className="text-primary text-2xl ml-1">●</span>
@@ -55,9 +55,9 @@ const MobileMenu: React.FC = () => {
           </button>
         </div>
 
-        <ul className="flex-1 flex flex-col justify-center items-center space-y-8">
+        <ul className="flex-1 flex flex-col justify-center items-center space-y-8 mb-20">
           {navigationLinks.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} className="text-center">
               <a
                 href={link.href}
                 onClick={handleClose}
