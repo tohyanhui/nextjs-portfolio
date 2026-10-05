@@ -1,8 +1,8 @@
 export const navigationLinks = [
-  { href: "#features", label: "Showcase" },
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ] as const;
 

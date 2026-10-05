@@ -7,7 +7,6 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ScrollAnimations from "./components/ScrollAnimations";
 
 export const metadata: Metadata = {
   alternates: {
@@ -21,8 +20,8 @@ export default function Home() {
     '@type': 'Person',
     name: 'Toh Yan Hui',
     url: 'https://www.tohyanhui.com',
-    jobTitle: 'Software Developer',
-    description: 'Software Developer specializing in web and mobile development',
+    jobTitle: 'Computer Science student',
+    description: 'Computer Science student building applied AI systems and software',
     sameAs: [
       'https://github.com/tohyanhui',
       'https://www.linkedin.com/in/tohyanhui/',
@@ -36,8 +35,10 @@ export default function Home() {
       'React Native',
       'Java',
       'Python',
-      'Web Development',
-      'Mobile Development',
+      'Machine Learning',
+      'Software Engineering',
+      'PyTorch',
+      'Docker',
     ],
   };
 
@@ -47,14 +48,13 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ScrollAnimations />
       <Header />
       <main>
         <Hero />
+        <Projects />
         <Features />
         <About />
         <Skills />
-        <Projects />
         <Contact />
       </main>
       <Footer />

@@ -1,56 +1,19 @@
 import Image from "next/image";
+import { LuArrowUpRight } from "react-icons/lu";
 
 const About = () => (
-  <section
-    id="about"
-    className="py-24 translate-y-4 transition-all duration-500 opacity-0"
-  >
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">
-            I'm a software developer focused on creating clean, efficient, and
-            user-friendly software.
-          </p>
-          <p className="text-gray-600 dark:text-gray-400 mb-6">
-            My expertise spans HTML, CSS, JavaScript, Java and modern
-            frameworks, enabling me to craft dynamic and engaging software that
-            is both scalable and optimised. I always follow best coding
-            practices to ensure high-quality, maintainable code.
-          </p>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
-            When I'm not coding, I enjoy exploring new technologies, watching
-            tech-related content, and reading up on the latest trends in
-            software development.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#contact"
-              className="px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 shadow-blue-200/20 dark:shadow-blue-700/10 text-center"
-            >
-              Contact Me
-            </a>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener"
-              className="px-8 py-3 bg-white dark:bg-dark-background-secondary text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 rounded-lg hover:border-gray-900 dark:hover:border-white transition-colors text-center"
-            >
-              Download Resume
-            </a>
-          </div>
+  <section id="about" className="flex min-h-[100svh] items-center bg-gray-950 py-24 text-white">
+    <div className="container mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="grid items-center gap-10 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
+        <div className="relative order-2 mx-auto aspect-[4/5] w-full max-w-[360px] overflow-hidden rounded-md bg-gray-800 md:order-1 md:mx-0">
+          <Image src="/profile-1.png" alt="Portrait of Toh Yan Hui" fill sizes="(max-width: 768px) 90vw, 360px" className="object-cover object-center" />
         </div>
-        <div className="relative">
-          <div className="w-72 h-72 mx-auto animate-morph bg-gradient-to-br from-primary via-secondary to-accent rounded-full relative overflow-hidden isolate">
-            <Image
-              src="/profile-1.png"
-              alt="Toh Yan Hui - Software Developer portrait photo"
-              fill
-              sizes="288px"
-              className="absolute inset-0 w-full h-full object-cover z-10"
-            />
-          </div>
+        <div className="order-1 md:order-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-300">The person behind the work</p>
+          <h2 className="mt-4 max-w-xl text-3xl font-semibold leading-tight sm:text-4xl">Curious about how things work. More interested in making them work better.</h2>
+          <p className="mt-6 max-w-xl leading-relaxed text-gray-300">I study Computer Science at the National University of Singapore, with interests across AI and software engineering. I enjoy the whole arc of a problem: understanding it, testing ideas, and delivering something useful.</p>
+          <p className="mt-4 max-w-xl leading-relaxed text-gray-300">Industry work, teaching, and personal projects have taught me to pair technical depth with clear communication. My studies also include an exchange at Lund University.</p>
+          <a href="#contact" className="mt-8 inline-flex items-center gap-2 border-b border-teal-300 pb-1 text-sm font-semibold text-teal-300 transition-colors hover:text-white">Let&apos;s connect <LuArrowUpRight aria-hidden="true" /></a>
         </div>
       </div>
     </div>

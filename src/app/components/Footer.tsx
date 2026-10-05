@@ -7,26 +7,25 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white dark:bg-dark-background border-t border-gray-200 dark:border-gray-800 py-12">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-          <div className="flex items-center mb-4 md:mb-0">
-            <span className="text-xl font-extrabold">Toh Yan Hui</span>
-            <span className="text-primary text-2xl ml-1">●</span>
+    <footer className="bg-white dark:bg-dark-background border-t border-gray-200 dark:border-gray-800 py-10">
+      <div className="container mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="grid items-center gap-6 text-center md:grid-cols-[1fr_auto_1fr] md:text-left mb-8">
+          <div>
+            <span className="text-lg font-bold">Toh Yan Hui</span>
           </div>
-          <ul className="flex flex-wrap justify-center gap-6 mb-0">
+          <ul className="mx-auto flex flex-wrap justify-center gap-x-4 gap-y-2 max-[359px]:max-w-[220px]">
             {navigationLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-teal-300 transition-colors"
                 >
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="flex gap-4">
+          <div className="flex justify-center gap-4 md:justify-end">
             <a
               href={socialLinks.github}
               target="_blank"

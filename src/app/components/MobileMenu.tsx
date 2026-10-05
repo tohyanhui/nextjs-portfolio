@@ -1,17 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { FaTimes } from "react-icons/fa";
 import { navigationLinks } from "../config/navigation";
 
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(() => () => {}, () => true, () => false);
 
   useEffect(() => {
     if (isOpen) {
@@ -33,18 +29,15 @@ const MobileMenu: React.FC = () => {
     setIsOpen(false);
   };
 
-  const menuContent = mounted ? createPortal(
+  const menuContent = mounted && isOpen ? createPortal(
     <div
       data-mobile-menu="true"
-      className={`fixed left-0 top-0 z-[9999] w-screen h-dvh bg-white dark:bg-dark-background transition-transform duration-300 md:hidden ${
-        isOpen ? "translate-x-0" : "translate-x-full"
-      }`}
+      className="fixed left-0 top-0 z-[9999] w-screen h-dvh bg-white dark:bg-dark-background md:hidden"
     >
       <div className="w-full h-full flex flex-col">
         <div className="flex justify-between items-center py-4 px-4 flex-shrink-0">
           <div className="flex items-center">
-            <span className="text-xl font-extrabold">Toh Yan Hui</span>
-            <span className="text-primary text-2xl ml-1">●</span>
+            <span className="text-lg font-bold">Toh Yan Hui</span>
           </div>
           <button 
             onClick={handleClose} 

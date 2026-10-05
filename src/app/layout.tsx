@@ -11,24 +11,26 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteTitle = "Toh Yan Hui | AI & Software Engineering";
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.tohyanhui.com'),
   title: {
-    default: "Toh Yan Hui - Software Developer Portfolio",
+    default: siteTitle,
     template: "%s | Toh Yan Hui"
   },
-  description: "Software Developer specializing in web and mobile development. Expert in React, Next.js, React Native, Java, and Python. View my projects and get in touch.",
-  keywords: ["Toh Yan Hui", "Software Developer", "Web Developer", "Mobile Developer", "React", "Next.js", "React Native", "Java", "Python", "Portfolio"],
+  description: "Toh Yan Hui is a Computer Science student at NUS building applied AI systems and thoughtful software. Explore projects, experience, and skills.",
+  keywords: ["Toh Yan Hui", "Software Engineering", "Applied AI", "Machine Learning", "Python", "Java", "TypeScript", "React Native", "PyTorch", "Portfolio"],
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
       { url: '/icon-192', type: 'image/png', sizes: '192x192' },
       { url: '/icon-512', type: 'image/png', sizes: '512x512' },
     ],
     apple: [
       { url: '/apple-icon', type: 'image/png', sizes: '180x180' },
     ],
-    shortcut: [{ url: '/favicon.ico' }],
+    shortcut: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
   },
   authors: [{ name: "Toh Yan Hui" }],
   creator: "Toh Yan Hui",
@@ -42,15 +44,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.tohyanhui.com",
-    title: "Toh Yan Hui - Software Developer Portfolio",
-    description: "Software Developer specializing in web and mobile development. Expert in React, Next.js, React Native, Java, and Python.",
+    title: siteTitle,
+    description: "Computer Science student at NUS building applied AI systems and thoughtful software.",
     siteName: "Toh Yan Hui Portfolio",
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: siteTitle }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Toh Yan Hui - Software Developer Portfolio",
-    description: "Software Developer specializing in web and mobile development. Expert in React, Next.js, React Native, Java, and Python.",
+    title: siteTitle,
+    description: "Computer Science student at NUS building applied AI systems and thoughtful software.",
     creator: "@tohyanhui01",
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
@@ -69,7 +73,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0070f3",
+  themeColor: "#f8faf9",
 };
 
 export default function RootLayout({
@@ -82,10 +86,6 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans text-gray-900 dark:text-white bg-white dark:bg-dark-background transition-colors duration-300`}
       >
-        {/* Dark mode background gradients */}
-        <div className="fixed inset-0 -z-10 opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
-        </div>
         {children}
         <Analytics />
         <SpeedInsights />

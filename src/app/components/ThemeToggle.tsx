@@ -1,10 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { useEffect, useSyncExternalStore } from "react";
+import { LuSun, LuMoon } from "react-icons/lu";
 
 const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(false);
+  const isDark = useSyncExternalStore(
+    (callback) => {
+      window.addEventListener("portfolio-theme-change", callback);
+      return () => window.removeEventListener("portfolio-theme-change", callback);
+    },
+    () => document.documentElement.classList.contains("dark"),
+    () => false,
+  );
 
   useEffect(() => {
     // Check for saved theme preference or prefer-color-scheme
@@ -15,10 +22,10 @@ const ThemeToggle = () => {
 
     if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
       document.documentElement.classList.add("dark");
-      setIsDark(true);
+      window.dispatchEvent(new Event("portfolio-theme-change"));
       document
         .querySelector("meta[name='theme-color']")
-        ?.setAttribute("content", "#000");
+        ?.setAttribute("content", "#111416");
     }
   }, []);
 
@@ -27,17 +34,17 @@ const ThemeToggle = () => {
     html.classList.toggle("dark");
     const isDarkMode = html.classList.contains("dark");
 
-    setIsDark(isDarkMode);
+    window.dispatchEvent(new Event("portfolio-theme-change"));
 
     if (isDarkMode) {
       document
         .querySelector("meta[name='theme-color']")
-        ?.setAttribute("content", "#000");
+        ?.setAttribute("content", "#111416");
       localStorage.setItem("theme", "dark");
     } else {
       document
         .querySelector("meta[name='theme-color']")
-        ?.setAttribute("content", "#0070f3");
+        ?.setAttribute("content", "#f8faf9");
       localStorage.setItem("theme", "light");
     }
   };
@@ -49,9 +56,9 @@ const ThemeToggle = () => {
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       {isDark ? (
-        <FaSun className="text-gray-600 dark:text-gray-400" />
+        <LuSun className="h-5 w-5 text-gray-600 dark:text-gray-400" />
       ) : (
-        <FaMoon className="text-gray-600 dark:text-gray-400" />
+        <LuMoon className="h-5 w-5 text-gray-600 dark:text-gray-400" />
       )}
     </button>
   );

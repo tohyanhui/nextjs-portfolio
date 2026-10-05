@@ -32,11 +32,16 @@ const TerminalAnimation = () => {
         <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
         <span className="w-3 h-3 rounded-full bg-green-500"></span>
       </div>
-      <div className="p-4 sm:p-6 font-mono">
-        <div className="text-xs sm:text-base">
+      <div className="p-4 font-mono sm:text-center">
+        <div className="text-xs sm:text-sm lg:text-[13px]">
           <span className="text-green-500">$</span>{" "}
-          <span className="text-gray-900 dark:text-white break-words sm:whitespace-nowrap">
-            {displayText}
+          <span className="text-gray-900 dark:text-white">
+            {displayText.split("/").map((part, index, parts) => (
+              <React.Fragment key={index}>
+                {part}
+                {index < parts.length - 1 && <>/<wbr /></>}
+              </React.Fragment>
+            ))}
           </span>
           {showCursor && (
             <span className="inline-block w-2 h-5 bg-gray-900 dark:bg-white ml-1 animate-blink align-middle"></span>

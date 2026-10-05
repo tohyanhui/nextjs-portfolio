@@ -1,89 +1,26 @@
-import { FaHtml5, FaCss3, FaJs, FaPython, FaJava, FaReact, FaDatabase } from "react-icons/fa";
+const groups = [
+  { number: "01", title: "AI & machine learning", items: ["Python", "PyTorch", "Hugging Face", "scikit-learn", "NumPy", "pandas"] },
+  { number: "02", title: "Software development", items: ["Java", "TypeScript", "JavaScript", "SQL", "C / C++", "HTML", "CSS"] },
+  { number: "03", title: "Platforms & tools", items: ["React Native", "FastAPI", "Docker", "Firebase", "PostgreSQL", "MongoDB", "Azure"] },
+];
 
 const Skills = () => (
-  <section
-    id="skills"
-    className="py-24 bg-gray-50 dark:bg-dark-background-secondary translate-y-4 transition-all duration-500 opacity-0"
-  >
-    <div className="container mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-        My Skills
-      </h2>
-      <p className="text-xl text-gray-600 dark:text-gray-400 text-center mb-16">
-        Technologies and tools I use to bring products to life
-      </p>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Skill Card 1 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
-          <div className="w-16 h-16 bg-orange-600/10 rounded-full flex items-center justify-center mb-6">
-            <FaHtml5 className="text-orange-600 text-3xl" />
+  <section id="skills" className="flex min-h-[100svh] items-center border-t border-gray-200 py-24 dark:border-gray-800">
+    <div className="container mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mb-8 sm:mb-10">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary dark:text-teal-300">Toolbox</p>
+        <h2 className="mt-4 text-3xl font-semibold text-gray-950 dark:text-white sm:text-4xl">Skills that connect the dots.</h2>
+      </div>
+      <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
+        {groups.map((group) => (
+          <div key={group.number} className="border-t-2 border-gray-950 pt-5 dark:border-teal-300">
+            <span className="text-xs font-semibold text-primary dark:text-teal-300">{group.number}</span>
+            <h3 className="mt-3 mb-5 text-lg font-semibold text-gray-950 dark:text-white">{group.title}</h3>
+            <div className="flex flex-wrap gap-2">
+              {group.items.map((item) => <span key={item} className="rounded border border-gray-200 bg-[#f8faf9] px-3 py-1.5 text-sm text-gray-700 dark:border-gray-700 dark:bg-dark-background-secondary dark:text-gray-200">{item}</span>)}
+            </div>
           </div>
-          <h3 className="text-xl font-bold mb-4">HTML5</h3>
-          <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-            <div className="w-[85%] h-full bg-gradient-to-br from-primary to-secondary rounded-full"></div>
-          </div>
-        </div>
-        {/* Skill Card 2 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
-          <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mb-6">
-            <FaCss3 className="text-blue-500 text-3xl" />
-          </div>
-          <h3 className="text-xl font-bold mb-4">CSS3</h3>
-          <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-            <div className="w-[85%] h-full bg-gradient-to-br from-primary to-secondary rounded-full"></div>
-          </div>
-        </div>
-        {/* Skill Card 3 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
-          <div className="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mb-6">
-            <FaJs className="text-yellow-400 text-3xl" />
-          </div>
-          <h3 className="text-xl font-bold mb-4">JavaScript</h3>
-          <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-            <div className="w-[90%] h-full bg-gradient-to-br from-primary to-secondary rounded-full"></div>
-          </div>
-        </div>
-        {/* Skill Card 4 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
-          <div className="w-16 h-16 bg-blue-700/10 rounded-full flex items-center justify-center mb-6">
-            <FaPython className="text-blue-700 text-3xl" />
-          </div>
-          <h3 className="text-xl font-bold mb-4">Python</h3>
-          <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-            <div className="w-[90%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-          </div>
-        </div>
-        {/* Skill Card 5 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
-          <div className="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mb-6">
-            <FaJava className="text-orange-500 text-3xl" />
-          </div>
-          <h3 className="text-xl font-bold mb-4">Java</h3>
-          <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-            <div className="w-[95%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-          </div>
-        </div>
-        {/* Skill Card 6 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
-          <div className="w-16 h-16 bg-blue-300/10 rounded-full flex items-center justify-center mb-6">
-            <FaReact className="text-cyan-300 text-3xl" />
-          </div>
-          <h3 className="text-xl font-bold mb-4">React Native</h3>
-          <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-            <div className="w-[80%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-          </div>
-        </div>
-        {/* Skill Card 7 */}
-        <div className="bg-white dark:bg-dark-background p-8 rounded-lg shadow-lg border border-gray-200 dark:border-transparent dark:ring-1 dark:ring-gray-800 dark:shadow-blue-500/10">
-          <div className="w-16 h-16 bg-red-600/10 rounded-full flex items-center justify-center mb-6">
-            <FaDatabase className="text-red-600 text-3xl" />
-          </div>
-          <h3 className="text-xl font-bold mb-4">SQL</h3>
-          <div className="w-full h-2 bg-gray-200 dark:bg-dark-background rounded-full overflow-hidden">
-            <div className="w-[85%] h-full bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
